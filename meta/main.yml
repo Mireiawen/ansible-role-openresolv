@@ -1,0 +1,29 @@
+---
+## /* vim: set tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+galaxy_info:
+  namespace: 'mireiawen'
+  role_name: 'openresolv'
+  min_ansible_version: '7.1'
+
+  author: 'Mira "Mireiawen" Manninen'
+  description: 'Install the openresolv package and optionally make it stop the resolv.conf modifications'
+  license: 'MIT'
+
+  platforms:
+  - name: 'Debian'
+    versions:
+    # '11 Bullseye'
+    - 'bullseye'
+    # '12 Bookworm'
+    - 'bookworm'
+  - name: 'Ubuntu'
+    versions:
+    # '22.04 Jammy'
+    - 'jammy'
+
+  galaxy_tags:
+  - 'linux'
+  - 'dns'
+
+dependencies: []

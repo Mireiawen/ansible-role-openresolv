@@ -1,0 +1,15 @@
+---
+## /* vim: set ft=yaml tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+- name: "Make sure the package is installed"
+  ansible.builtin.package:
+    name: "{{ openresolv_package }}"
+    state: "{{ openresolv_package_state }}"
+
+- name: "Configure the openresolv to not configure resolv.conf"
+  ansible.builtin.lineinfile:
+    path: "/etc/resolvconf.conf"
+    regexp: "^resolvconf="
+    line: "resolvconf=NO"
+  when:
+  - "openresolv_static_resolvconf"

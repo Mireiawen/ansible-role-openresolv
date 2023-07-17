@@ -1,0 +1,6 @@
+---
+## /* vim: set ft=yaml tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab autoindent: */
+
+openresolv_package: "openresolv"
+openresolv_package_state: "present"
+openresolv_static_resolvconf: true
